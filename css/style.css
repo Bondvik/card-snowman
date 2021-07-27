@@ -1,0 +1,333 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* Variables */
+:root {
+  --color-base: #0D0417;
+  --color-white: #ffffff;
+  --color-whitesmoke: #F5F5F5;
+  --color-darkgray: #787878;
+  --color-softorange: #F8D456;
+  --color-lightgrayish: #e6e4e1;
+  --color-darkgrayishyellow: #a6a5a2;
+  --color-darkgrayishblue: #797980;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', 'Arial', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--color-base);
+  line-height: 20px;
+  min-width: 1170px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.card-wrapper {
+  padding: 42px;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70px 30px 70px 30px 70px 30px 70px 30px 70px 30px 70px 30px 70px 30px 70px 30px 70px 30px 70px 30px 70px 30px 70px;
+  grid-template-columns: repeat(12, 70px);
+  grid-column-gap: 30px;
+}
+
+.link {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  color: var(--color-base);
+  outline: none;
+}
+
+.link:visited {
+  color: var(--color-darkgrayishblue);
+}
+
+.link:hover {
+  color: var(--color-base);
+  -webkit-text-decoration-color: var(--color-base);
+          text-decoration-color: var(--color-base);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+}
+
+.link:focus,
+.link:active {
+  color: var(--color-base);
+  -webkit-text-decoration-color: var(--color-softorange);
+          text-decoration-color: var(--color-softorange);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+
+.button {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: var(--color-softorange);
+  border: 2px solid var(--color-softorange);
+  padding: 15px 26px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-white);
+}
+
+button:focus,
+button:active {
+  border: 1px solid var(--color-base);
+}
+
+.button:disabled {
+  border-color: var(--color-lightgrayish);
+  background-color: var(--color-lightgrayish);
+  color: var(--color-darkgrayishyellow);
+}
+
+.card-img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+  border-radius: 8px;
+}
+
+.card-img__picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-info {
+  grid-column: 8 / -1;
+  border-radius: 8px;
+  background-color: var(--color-whitesmoke);
+
+  display: -ms-grid;
+
+  display: grid;
+  -ms-grid-rows: auto 19px auto 19px auto 19px auto 19px auto 19px auto;
+  grid-template-rows: repeat(6, auto);
+  grid-row-gap: 19px;
+}
+
+.card-info-wrapper {
+  padding: 35px 30px;
+}
+
+.card-info__code {
+  margin: 0;
+  color: var(--color-darkgray);
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.card-info__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.card-info__price-and-rate-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-info__price {
+  margin: 0;
+  margin-right: 30px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 43px;
+}
+
+.card-info__stars {
+  margin-right: 15px;
+}
+
+.star-rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.star-rate__item {
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-image: url('../img/star_icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.star-rate__item.active {
+  background-image: url('../img/star_icon_active.png');
+}
+
+.star-rate__item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.card-info__subtitle {
+  margin: 0;
+  padding: 0;
+}
+
+.data-list__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(12, 4, 23, .1);
+}
+
+.data-list__row dt {
+  color: var(--color-darkgray);
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.data-list__row dd {
+  margin: 0;
+}
+
+.card-info__button-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 30px auto;
+  grid-template-columns: auto auto;
+  grid-column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-info__link-to-shop {
+  position: relative;
+  padding-right: 15px;
+}
+
+.card-info__link-to-shop::after {
+  position: absolute;
+  content: '';
+  width: 18px;
+  height: 18px;
+  right: 0;
+  
+  background-color: var(--color-white);
+  background-image: url('../img/arrow-black.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.card-info__link-to-shop:hover::after {
+  background-color: var(--color-softorange);
+  background-image: url('../img/arrow-white.png');
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--color-base);
+  background-color: var(--color-white);
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.modal-popup {
+  display: none;
+  top: 120px;
+  bottom: auto;
+  width: 560px;
+  background-color: var(--color-white);
+  padding: 30px 35px;
+  font-size: inherit;
+  line-height: 18px;
+  z-index: 4;
+}
+
+.modal-show {
+  display: block;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  background-image: url('../img/close-cross.svg');
+  border: 0;
+  cursor: pointer;
+  opacity: .4;
+}
+
+.modal__button-close:hover {
+  opacity: 1;
+  border: 0;
+}
+
+.modal__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.modal-item {
+  padding-bottom: 15px;
+}
